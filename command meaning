@@ -68,4 +68,26 @@ gpg --list-keys --keyring /etc/apt/trusted.gpg.d/<keyname>.gpg
 ls /etc/apt/trusted.gpg.d/
 
 
+
+
+
+
+
+In Linux, "dearmor" refers to a function within the GPG (GNU Privacy Guard) tool that converts ASCII armored data (a text-based representation of encrypted data) back into its original binary format, essentially removing the "armor" that allows it to be easily transmitted through text-based systems like email. 
+Key points about dearmor:
+Used with GPG:
+The "dearmor" function is accessed using the gpg --dearmor command in the terminal. 
+ASCII Armor:
+"Armor" refers to the ASCII encoding that allows encrypted data to be represented with printable characters, making it easier to transfer through text-based environments. 
+Conversion process:
+When you use gpg --dearmor, it takes the ASCII armored data as input and outputs the original binary data. 
+Common use cases for dearmor:
+Adding repository keys: When adding a new software repository to your system using apt or yum, you often need to download a GPG key which is usually provided in ASCII armored format. You would use gpg --dearmor to convert it into a usable binary key before adding it to your keyring. 
+
+
+
+
+
+
+
   
